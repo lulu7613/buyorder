@@ -1,8 +1,205 @@
-// variable
+// -------- variable --------
 
+// color
+$primary: #bcf3ba;
+$light: #fff;
+$orange: #ffcb6a;
+$secondary: #dbdbdb;
 
-// css
+* {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+// -------- css --------
+
 body {
-  font-family: 'Microsoft JhengHei', Helvetica, Arial, sans-serif;
+  font-family: "Microsoft JhengHei", Helvetica, Arial, sans-serif;
 }
 
+.mx-auto {
+  margin: 0 auto;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-light {
+  background-color: $light;
+}
+
+.border-primary {
+  border: $primary 3px solid;
+}
+
+.border-orange {
+  border: $orange 3px solid;
+}
+
+.border-secondary {
+  border: $secondary 3px solid;
+}
+
+.border-light {
+  border: $light 3px solid;
+}
+
+.btn-block {
+  width: 85%;
+  display: block;
+}
+
+.btn {
+  padding: 12px 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: $light;
+  cursor: pointer;
+
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Microsoft JhengHei";
+
+  &:active {
+    background-color: darken($light, 9%);
+  }
+}
+
+.btn-outline-primary {
+  background-color: $light;
+  border: $primary 4px solid;
+  background-color: $light;
+
+  &:hover {
+    background-color: darken($primary, 9%);
+  }
+}
+
+.disabled {
+  border: $secondary 4px solid;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+
+  width: 550px;
+  height: 450px;
+  background-color: $primary;
+  border-radius: 15px;
+  margin: 30px auto;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 15px 30px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pre-order {
+    position: absolute;
+    top: -5px;
+    right: 0;
+
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 35px;
+    
+    p {
+      margin: 0;
+    }
+  }
+
+  .product-img {
+    width: 48%;
+    height: 340px;
+    background: $light url(./assets/img/014rl.jpg) center center no-repeat;
+    background-size: contain;
+    margin: 10px;
+  }
+
+  .product-detail {
+    width: 38%;
+    height: 340px;
+    background-color: $light;
+    margin: 10px;
+
+    .text {
+      width: 80%;
+      margin: 20px auto;
+      padding: 15px 0 15px 15px;
+
+      font-size: 18px;
+    }
+
+    .pointText {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+
+  width: 550px;
+  height: 450px;
+  background-color: rgba(52, 58, 64, 0.4);
+  border-radius: 15px;
+
+  .modal-content {
+    width: 300px;
+    height: 250px;
+    margin: 100px auto;
+  }
+
+  .modal-head {
+    position: relative;
+
+    .close-icon {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      width: 30px;
+      line-height: 30px;
+      text-align: center;
+
+      cursor: pointer;
+    }
+
+    .modal-title {
+      text-align: center;
+      font-size: 24px;
+      padding-top: 15px;
+    }
+  }
+
+  .modal-body {
+    display: flex;
+    justify-content: center;
+
+    .count-action {
+      width: 25%;
+    }
+
+    .count-number {
+      width: 30%;
+      font-size: 26px;
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  .modal-footer {
+    width: 120px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
